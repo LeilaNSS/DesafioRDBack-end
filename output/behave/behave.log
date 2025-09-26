@@ -1,19 +1,9 @@
-Feature: Filmes da API Star Wars # features/planets.feature:1
+Feature: Species da API Star Wars # features/species.feature:1
   Como consumidor da API
-  Quero consultar os filmes de Star Wars
+  Quero consultar os species de Star Wars
   Para validar os dados e garantir que estão corretos
-  Scenario: Listar todos os planetas                    # features/planets.feature:7
-    When eu consulto o endpoint "/planets/"             # features/steps/planets_step.py:6
-    Then o status code deve ser 200                     # features/steps/generico_status.py:4
-    And cada planeta deve ter os atributos obrigatórios # features/steps/planets_step.py:21
-
-  @filme
-  Scenario: Consultar um planeta válido              # features/planets.feature:13
-    When eu consulto o endpoint "/planets/1/"        # features/steps/planets_step.py:11
-    Then o status code deve ser 200                  # features/steps/generico_status.py:4
-    And O planeta deve ter os atributos obrigatórios # features/steps/planets_step.py:48
-
-  Scenario: Consultar um planeta inválido        # features/planets.feature:18
-    When eu consulto o endpoint "/planets/9999/" # features/steps/planets_step.py:16
+  @Specie
+  Scenario: Consultar uma specie inválido        # features/species.feature:20
+    When eu consulto o endpoint "/species/9999/" # features/steps/species_step.py:16
     Then o status code deve ser 404              # features/steps/generico_status.py:8
 

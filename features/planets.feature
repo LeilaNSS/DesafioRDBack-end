@@ -1,6 +1,6 @@
-Feature: Filmes da API Star Wars
+Feature: Planetas da API Star Wars
   Como consumidor da API
-  Quero consultar os filmes de Star Wars
+  Quero consultar os planetas de Star Wars
   Para validar os dados e garantir que estão corretos
 
 

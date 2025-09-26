@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="1.823136329650879" tests='1' skipped='0'
+name="Species" failures='0' errors='0'><testcase time="1.823136329650879" name="Consultar_Uma_Specie_Invalido" status="passed"
+         classname="Species_Da_Api_Star_Wars"><system-out>
+            <![CDATA[
+            @scenario.begin
+                @Specie
+                scenario: Consultar uma specie inválido
+                when eu consulto o endpoint "/species/9999/" ... Status.passed in 1.821s 
+                then o status code deve ser 404 ... Status.passed in 0.001672s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>
