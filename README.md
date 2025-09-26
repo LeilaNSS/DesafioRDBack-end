@@ -31,19 +31,19 @@ behavex -t @tag
 ## Caso queria rodar todos os testes
 behavex
 ## Estrutura do projeto
-.
-├─ features/
-   ├─ data # Para futuro json
-│  ├─ planets.feature
-│  ├─ species.feature
-│  ├─ steps/
-│  │  ├─ planets_step.py
-│  │  └─ species_steps.py
-│  └─ environment.py
-├─ utils/
-│  └─ service.py
-├─ requirements.txt
-└─ README.md
+
+├─ features/   
+   ├─ data # Para futuro json   
+│  ├─ planets.feature   
+│  ├─ species.feature   
+│  ├─ steps/   
+│  │  ├─ planets_step.py   
+│  │  └─ species_steps.py   
+│  └─ environment.py   
+├─ utils/   
+│  └─ service.py   
+├─ requirements.txt   
+└─ README.md   
 
 ## Caso queira abrir o relátorio:
 Após rodar os testes, abra a pasta output, clique com o botão direto em report.html, clique em abrir com e escolha o navegador de preferência. 
