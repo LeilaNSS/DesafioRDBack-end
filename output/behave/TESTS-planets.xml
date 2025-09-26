@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="5.417614221572876" tests='3' skipped='0'
+name="Planets" failures='0' errors='0'><testcase time="1.9488232135772705" name="Listar_Todos_Os_Planetas" status="passed"
+         classname="Filmes_Da_Api_Star_Wars"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Listar todos os planetas
+                when eu consulto o endpoint "/planets/" ... Status.passed in 1.945s 
+                then o status code deve ser 200 ... Status.passed in 0.001243s 
+                then cada planeta deve ter os atributos obrigatórios ... Status.passed in 0.002508s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="1.7867860794067383" name="Consultar_Um_Planeta_Valido" status="passed"
+         classname="Filmes_Da_Api_Star_Wars"><system-out>
+            <![CDATA[
+            @scenario.begin
+                @filme
+                scenario: Consultar um planeta válido
+                when eu consulto o endpoint "/planets/1/" ... Status.passed in 1.784s 
+                then o status code deve ser 200 ... Status.passed in 0.001244s 
+                then O planeta deve ter os atributos obrigatórios ... Status.passed in 0.001303s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="1.6820049285888672" name="Consultar_Um_Planeta_Invalido" status="passed"
+         classname="Filmes_Da_Api_Star_Wars"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Consultar um planeta inválido
+                when eu consulto o endpoint "/planets/9999/" ... Status.passed in 1.681s 
+                then o status code deve ser 404 ... Status.passed in 0.001093s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

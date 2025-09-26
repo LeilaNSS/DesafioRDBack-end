@@ -1,0 +1,6 @@
+behavex
+behave
+parse
+parse-type
+requests
+PyHamcrest==2.1.0
