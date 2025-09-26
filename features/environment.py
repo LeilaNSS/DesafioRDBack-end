@@ -7,11 +7,11 @@ from utils.service import ApiClient
 def before_all(context):
     context.base_url = os.getenv("BASE_URL", "https://swapi.dev/api/")
     context.client = ApiClient(context.base_url)
-    # Configura pasta de saída
+
     context.output_dir = os.path.join(os.getcwd(), "output")
     os.makedirs(context.output_dir, exist_ok=True)
 
-    # Configura logging
+
     log_file = os.path.join(context.output_dir, "logs", f"behave_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
 

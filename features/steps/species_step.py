@@ -22,7 +22,7 @@ def step_impl(context):
     def step_validate_species_required_fields(context):
         payload = context.response.json()
 
-        # Estrutura básica do payload de lista
+
         hc.assert_that(payload, hc.all_of(
             hc.has_key("count"),
             hc.has_key("next"),
@@ -34,7 +34,7 @@ def step_impl(context):
         hc.assert_that(results, hc.instance_of(list))
         hc.assert_that(results, hc.has_length(hc.greater_than(0)))
 
-        # Campos obrigatórios por espécie
+
         required = {
             "name", "classification", "designation", "average_height",
             "skin_colors", "hair_colors", "eye_colors", "average_lifespan",
@@ -42,7 +42,7 @@ def step_impl(context):
             "created", "edited", "url"
         }
 
-        # 1) Cada item tem todas as chaves obrigatórias
+
         hc.assert_that(
             results,
             hc.every_item(
@@ -50,7 +50,6 @@ def step_impl(context):
             )
         )
 
-        # 2) (Opcional, mas útil) As coleções existem como listas
         hc.assert_that(
             results,
             hc.every_item(

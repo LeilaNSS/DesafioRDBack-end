@@ -22,7 +22,7 @@ def step_impl(context):
 def step_impl(context):
     payload = context.response.json()
 
-    # results existe e é lista não-vazia
+
     hc.assert_that(payload, hc.has_key("results"))
     planets = payload["results"]
     hc.assert_that(planets, hc.instance_of(list))
@@ -36,11 +36,11 @@ def step_impl(context):
     }
 
     for p in planets:
-        # 1) todos os campos obrigatórios existem
+
         for k in required:
             hc.assert_that(p, hc.has_key(k), f"Planeta sem campo obrigatório: {k}")
 
-        # 2) tipos/formatos principais
+
         for k in ["name", "climate", "gravity", "terrain"]:
             hc.assert_that(p[k], hc.instance_of(str), f"Campo {k} não é string")
 
